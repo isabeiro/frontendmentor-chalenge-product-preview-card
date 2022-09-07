@@ -1,0 +1,106 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+:root {
+    --primary-color-dark-cyan: hsl(158, 36%, 37%);
+    --primary-color-cream: hsl(30, 38%, 92%);
+
+    --neutral-color-very-dark-blue: hsl(212, 21%, 14%);
+    --neutral-color-dark-grayish-blue: hsl(228, 12%, 48%);
+    --neutral-color-white: hsl(0, 0%, 100%);
+}
+
+body {
+    background-color: var(--primary-color-cream);
+    width: 90vw;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    height: 550px;
+    display: flex;
+    width: 40%;
+    border-radius: 15px;
+    background-color: var(--neutral-color-white);
+
+    .imageProduct {
+        border-radius: 15px 0 0 15px;
+        height: 550px;
+    }
+    
+    .description {
+        flex-direction: column; 
+        flex-wrap: wrap;
+        padding: 31px;
+
+        .perfume {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--neutral-color-dark-grayish-blue);
+            letter-spacing: 4px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 38px;
+        }
+
+        .texto {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--neutral-color-dark-grayish-blue);
+            font-size: 15px;
+            line-height: 25px;
+            font-weight: 500;
+        }
+
+        .prices {
+
+            display: flex;
+            justify-content: space-between;
+            padding-right: 60px;
+            
+            h2 {
+                font-family: 'Fraunces', serif;
+                font-size: 32px;
+                color: var(--primary-color-dark-cyan);
+            }
+
+            .valorAnt {
+                align-self: center;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 500;
+                font-size: 13px;
+                color: var(--neutral-color-dark-grayish-blue);
+                text-decoration-line: line-through;
+            }
+
+        }
+
+        .button {
+            background-color: var(--neutral-color-very-dark-blue);
+            color: var(--neutral-color-white);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            width: 100%;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            p {
+                padding-left: 9px;
+            }
+            
+            :hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+

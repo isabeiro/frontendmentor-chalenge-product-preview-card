@@ -12,29 +12,33 @@
 
 body {
     background-color: var(--primary-color-cream);
-    width: 90vw;
-    height: 90vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0;
 }
 
 .container {
-    height: 550px;
     display: flex;
-    width: 40%;
+    width: 650px;
     border-radius: 15px;
     background-color: var(--neutral-color-white);
 
     .imageProduct {
         border-radius: 15px 0 0 15px;
-        height: 550px;
+        background-image: url(../img/image-product-desktop.jpg);
+        background-size: cover;
+        position: static;
+        width: 50%;
+        padding: 31px;
     }
     
     .description {
         flex-direction: column; 
         flex-wrap: wrap;
         padding: 31px;
+        width: 50%;
 
         .perfume {
             font-family: 'Montserrat', sans-serif;
@@ -45,7 +49,7 @@ body {
         }
 
         h1 {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Fraunces', serif;
             font-size: 38px;
         }
 
@@ -65,8 +69,8 @@ body {
             
             h2 {
                 font-family: 'Fraunces', serif;
-                font-size: 32px;
                 color: var(--primary-color-dark-cyan);
+                font-size: 32px;
             }
 
             .valorAnt {
@@ -81,12 +85,13 @@ body {
         }
 
         .button {
-            background-color: var(--neutral-color-very-dark-blue);
+            background-color: var(--primary-color-dark-cyan);
             color: var(--neutral-color-white);
             font-family: 'Montserrat', sans-serif;
             font-size: 14px;
             width: 100%;
             border-radius: 10px;
+            border: 0;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -101,6 +106,56 @@ body {
         }
     }
 }
+
+@media (max-width: 375px) {
+
+    body {
+        align-items: flex-start;
+        padding-top: 40px;
+    }
+
+    .container {
+        flex-direction: column;
+        height: 650px;
+        border-radius: 15px;
+        margin: 15px;
+        
+        .imageProduct {
+            position: static;
+            width: 100%;
+            height: 40%;
+            border-radius: 15px 15px 0 0;
+            background-image: url(../img/image-product-mobile.jpg);
+            padding: 0;
+
+        }
+
+        .description {
+            padding: 0;
+            margin: 10px 20px;
+            width: 90%;
+            font-size: 11px;
+
+            h1 {
+                margin: 0;
+                line-height: 34px;
+                font-size: 33px;
+            }
+
+            .prices {
+                justify-content: flex-start;
+                padding-right: 100px;
+            }
+
+            h2 {
+                padding-right: 20px;
+                margin-top: 0;
+            }
+        }
+
+    }
+}
+
 
 
 
